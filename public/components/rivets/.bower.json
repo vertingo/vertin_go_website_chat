@@ -1,0 +1,32 @@
+{
+  "name": "rivets",
+  "description": "Declarative data binding + templating solution.",
+  "homepage": "http://rivetsjs.com",
+  "version": "0.7.2",
+  "main": "dist/rivets.js",
+  "license": "MIT",
+  "authors": [
+    "Michael Richards"
+  ],
+  "keywords": [
+    "data binding",
+    "templating"
+  ],
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "spec"
+  ],
+  "dependencies": {
+    "sightglass": "~0.2.3"
+  },
+  "_release": "0.7.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.7.2",
+    "commit": "1bc811eaf228930c521274a3c95b9e5e18f25719"
+  },
+  "_source": "https://github.com/mikeric/rivets.git",
+  "_target": "~0.7.2",
+  "_originalSource": "rivets"
+}
