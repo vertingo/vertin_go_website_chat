@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+	<script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.DCqkg4_f1cE.O/m=gapi_iframes_style_bubble/exm=auth,ytsubscribe/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCN29Itx_77YsW7KCcAVebosjZAOGA/cb=gapi.loaded_2" async=""></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.DCqkg4_f1cE.O/m=auth/exm=ytsubscribe/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCN29Itx_77YsW7KCcAVebosjZAOGA/cb=gapi.loaded_1" async=""></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.DCqkg4_f1cE.O/m=ytsubscribe/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCN29Itx_77YsW7KCcAVebosjZAOGA/cb=gapi.loaded_0" async=""></script><script language="javascript"></script>
+    <title>Socket.IO chat</title>
+    <style>
+    </style>
+  </head>
+  <body id="logged-out">
+  <!-- youtube widget --><div id="slap_youtube" class="slap_youtube" style="display: none"><a href="http://surlapage.fr/widget/youtube" title="widget youtube">widget youtube</a><a href="http://surlapage.fr/gadget/popup-facebook" title="popup facebook">popup facebook</a><script type="text/javascript" src="http://surlapage.fr/script/youtubewidget.js?ath=w&yt-username=Ghettsunsix&amp;widget-width=390&amp;widget-height=580&amp;widget-fix=17&amp;theme=light&amp;position=right&amp;speed=300"></script></div><!-- end youtube widget -->
+	<section id="chat">
+      <ul id="messages">
+        <li rv-each-message="messages" rv-class="message.type">
+          <span class="label">
+            {message.label}
+          </span> {message.text}<div id='lien'></div>
+        </li>
+      </ul>
+	  <ul id="users">
+	    <li>
+<span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+<meta itemprop="name" content="Vertin Go Website"></span><div id="___ytsubscribe_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 168px; height: 48px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 168px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 48px;" tabindex="0" vspace="0" width="100%" id="I0_1480693990910" name="I0_1480693990910" src="https://www.youtube.com/subscribe_embed?usegapi=1&channelid=UC2g_-ipVjit6ZlACPWG4JvA&layout=full&count=false&origin=http%3A%2F%2Fvertin-go.com&gsrc=3p&ic=1&jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.DCqkg4_f1cE.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAGLTcCN29Itx_77YsW7KCcAVebosjZAOGA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&id=I0_1480693990910&parent=http%3A%2F%2Fvertin-go.com&pfname=&rpctoken=32231505" data-gapiattached="true"></iframe></div><div id="ytsubscribe-events-log"></div></li>
+        <li rv-each-user="users" class="new" rv-id="user.username">{user.username} <span class="typing" rv-show="user.typing">is typing...</span></li>
+      </ul>
+      <form action="">
+      <input id="m" autocomplete="off" /><button>Send</button>
+      </form>
+    </section>
+    <section id="login">
+      <form action="">
+        <label for="u">Username</label>
+        <input id="u" autocomplete="off" autofocus />
+		<br><br>
+		<label for="r">Région:</label>
+		<SELECT name="r" id="r" size="1">
+		<OPTION>Alsace
+		<OPTION>Aquitaine
+		<OPTION>Auvergne
+		<OPTION>Basse-Normandie
+		<OPTION>Bourgogne
+		<OPTION>Bretagne
+		<OPTION>Centre
+		<OPTION>Champagne-Ardenne
+		<OPTION>Corse
+		<OPTION>Franche-Comté
+		<OPTION>Haute-Normandie
+		<OPTION>Île-de-France
+		<OPTION>Languedoc-Roussillon
+		<OPTION>Limousin
+		<OPTION>Lorraine
+		<OPTION>Midi-Pyrénées
+		<OPTION>Nord-Pas-de-Calais
+		<OPTION>Pays de la Loire
+		<OPTION>Picardie
+		<OPTION>Poitou-Charentes
+		<OPTION>Provence-Alpes-Côte d'Azur
+		<OPTION>Rhône-Alpes
+		<OPTION>Guadeloupe
+		<OPTION>Guyane
+		<OPTION>La Réunion
+		<OPTION>Martinique
+		<OPTION>Mayotte
+		</SELECT>
+		<br><br>
+		<label for="d">Département:</label>
+		<SELECT name="d" id="d" size="1">
+		<OPTION>Ain
+<OPTION>Aisne
+<OPTION>Allier
+<OPTION>Alpes-de-Haute-Provence
+<OPTION>Alpes-Maritimes
+<OPTION>Ardèche
+<OPTION>Ardennes
+<OPTION>Ariège
+<OPTION>Aube
+<OPTION>Aude
+<OPTION>Aveyron
+<OPTION>Bas-Rhin
+<OPTION>Bouches-du-Rhône
+<OPTION>Calvados
+<OPTION>Cantal
+<OPTION>Charente
+<OPTION>Charente-Maritime
+<OPTION>Cher
+<OPTION>Corrèze
+<OPTION>Corse-du-Sud
+<OPTION>Côte-d'Or
+<OPTION>Côtes-d'Armor
+<OPTION>Creuse
+<OPTION>Deux-Sèvres
+<OPTION>Dordogne
+<OPTION>Doubs
+<OPTION>Drôme
+<OPTION>Essonne
+<OPTION>Eure
+<OPTION>Eure-et-Loir
+<OPTION>Finistère
+<OPTION>Gard
+<OPTION>Gers
+<OPTION>Gironde
+<OPTION>Haut-Rhin
+<OPTION>Haute-Corse
+<OPTION>Haute-Garonne
+<OPTION>Haute-Loire
+<OPTION>Haute-Marne
+<OPTION>Haute-Saône
+<OPTION>Haute-Savoie
+<OPTION>Haute-Vienne
+<OPTION>Hautes-Alpes
+<OPTION>Hautes-Pyrénées
+<OPTION>Hauts-de-Seine
+<OPTION>Hérault
+<OPTION>Ille-et-Vilaine
+<OPTION>Indre
+<OPTION>Indre-et-Loire
+<OPTION>Isère
+<OPTION>Jura
+<OPTION>Landes
+<OPTION>Loir-et-Cher
+<OPTION>Loire
+<OPTION>Loire-Atlantique
+<OPTION>Loiret
+<OPTION>Lot
+<OPTION>Lot-et-Garonne
+<OPTION>Lozère
+<OPTION>Maine-et-Loire
+<OPTION>Manche
+<OPTION>Marne
+<OPTION>Mayenne
+<OPTION>Meurthe-et-Moselle
+<OPTION>Meuse
+<OPTION>Morbihan
+<OPTION>Moselle
+<OPTION>Nièvre
+<OPTION>Nord
+<OPTION>Oise
+<OPTION>Orne
+<OPTION>Paris
+<OPTION>Pas-de-Calais
+<OPTION>Puy-de-Dôme
+<OPTION>Pyrénées-Atlantiques
+<OPTION>Pyrénées-Orientales
+<OPTION>Rhône
+<OPTION>Saône-et-Loire
+<OPTION>Sarthe
+<OPTION>Savoie
+<OPTION>Seine-et-Marne
+<OPTION>Seine-Maritime
+<OPTION>Seine-Saint-Denis
+<OPTION>Somme
+<OPTION>Tarn
+<OPTION>Tarn-et-Garonne
+<OPTION>Territoire de Belfort
+<OPTION>Val-d'Oise
+<OPTION>Val-de-Marne
+<OPTION>Var
+<OPTION>Vaucluse
+<OPTION>Vendée
+<OPTION>Vienne
+<OPTION>Vosges
+<OPTION>Yonne
+<OPTION>Yvelines
+		<OPTION>Guadeloupe
+		<OPTION>Guyane
+		<OPTION>La Réunion
+		<OPTION>Martinique
+		<OPTION>Mayotte
+		</SELECT>
+        <p>
+          <button>Login</button>
+        </p>
+      </form>
+    </section>
+    <script src="components/rivets/dist/rivets.bundled.min.js"></script>
+    <script src="components/jquery/dist/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="utils.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
