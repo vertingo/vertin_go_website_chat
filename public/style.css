@@ -112,7 +112,7 @@ section#chat #users li {
 section#chat #users li span.typing {
     float: right;
     font-style: italic;
-    color: #eee;
+    color: black;
 }
 section#login {
     transition: all 0.5s;
