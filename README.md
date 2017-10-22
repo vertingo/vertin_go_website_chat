@@ -21,8 +21,10 @@ Cette version ajoute les fonctionnalités suivantes par rapport à la version du
 
 Si vous n'avez pas bower d'installé sur votre machine, installez-le au préalable de la façon suivante :
 Egalement si vous n'avez pas Node.Js afin d'éxécuter les commandes npm téléchargez le sur l'url suivant: https://nodejs.org/en/
-```
+
 Une fois installé placer dans le dossier racine du chat en loccurence: socket.io-chat-master et éxécuter les commandes ci-dessous dans une invite de commande((Clic droit + Shift ==> Ouvrir une invite de commande!))!
+
+```
 npm install -g bower
 ```
 Pour installer l'application, téléchargez les sources (zip ou git clone) et exécutez la commande suivante depuis la racine du projet.
