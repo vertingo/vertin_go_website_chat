@@ -1,3 +1,4 @@
+![Image](https://raw.githubusercontent.com/vertingo/Easy_Admin_YouTube_Newsletter_Firebase/master/web/assets/images/github/vertin_go_website.jpg)
 # 🌐 Socket.io : Chat
 
 Cette application reprend les sources du tutoriel présent sur le blog [bini.io](http://blog.bini.io) :
