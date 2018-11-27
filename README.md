@@ -17,7 +17,7 @@ Cette version ajoute les fonctionnalités suivantes par rapport à la version du
 * Affichage du texte "typing" à côté du nom des utilisateurs en train de saisir un message
 
 
-## Installation
+## 🌐 Installation
 
 Si vous n'avez pas bower d'installé sur votre machine, installez-le au préalable de la façon suivante :
 Egalement si vous n'avez pas Node.Js afin d'éxécuter les commandes npm téléchargez le sur l'url suivant: https://nodejs.org/en/
@@ -33,7 +33,7 @@ npm install
 bower install
 ```
 
-## Démarrer l'application localement
+## 🌐 Démarrer l'application localement
 
 Pour démarrer l'application, exécutez la commande suivante depuis la racine du projet.
 ```
@@ -41,7 +41,7 @@ node server
 ```
 L'application est désormais accesssible à l'url **http://localhost:3000/**.
 
-## Déployer votre application via Git sur EvenNode.com(https://admin.evennode.com/login?continue=http%3A%2F%2Fadmin.evennode.com%2Fa%2Flist)
+## 🌐 Déployer votre application via Git sur EvenNode.com(https://admin.evennode.com/login?continue=http%3A%2F%2Fadmin.evennode.com%2Fa%2Flist)
 Si vous n'avez pas de compte git creer votre compte à l'url suivant:  https://github.com/business?utm_source=google&utm_medium=cpc&utm_term=git&utm_campaign=2018q1-adv-EMEA|NB|Git|FR|EN|EX|20160906
 Télécharger et installer également git localement afin de pouvoir éxécuter les commandes ci-dessous! ==> https://git-scm.com/download/win
 
